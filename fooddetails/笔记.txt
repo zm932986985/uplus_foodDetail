@@ -1,0 +1,52 @@
+项目说明文档：
+_src_自定义js：
+arrSort.js:内部定义了2个方法，传入需要解决的数组对象以及指定的字段，可以让数组对象按照指定字段正compareUp/反compareDown排序。
+mobile.js:内部根据屏幕大小改变dom的fontsize，使得rem可以完美的适配品屏幕大小，设计宽度为275。
+server.js：接口封装，运用axios搭配setupProxy.js完成接口的跨域。
+
+_src_component_:项目所有的组件归属，内部按照页面路由分成几个文件夹。
+_src_component_index:食材管理主页，内部有食材管理主页需要用到的组件。
+_src_component_addFood:添加食材主页，内部有添加食材主页需要用到的组件。
+_src_component_common:公用组件归属，里面有一些常用到又没必要重写的组件，例如Img。
+
+
+
+出现的问题以及解决方法：
+1、添加食材到待选列表后删除指定的某种食材，出现了无论点击哪个食材都是删除最后一个食材的问题。
+分析问题：公用组件 Img 的图片地址（url）没有进行更新，所以需要对Img组件进行更新判断。
+解决方法：在Img组件内部放入生命周期函数 componentWillReceiveProps ，对传入的props进行判断，如果props更新了及时更新渲染Dom，解决了问题。
+
+
+
+
+
+
+To fix the dependency tree, try following the steps below in the exact order:
+
+  1. Delete package-lock.json (not package.json!) and/or yarn.lock in your project folder.
+  2. Delete node_modules in your project folder.
+  3. Remove "babel-eslint" from dependencies and/or devDependencies in the package.json file in your project folder.
+  4. Run npm install or yarn, depending on the package manager you use.
+
+In most cases, this should be enough to fix the problem.
+If this has not helped, there are a few other things you can try:
+
+  5. If you used npm, install yarn (http://yarnpkg.com/) and repeat the above steps with it instead.
+     This may help because npm has known issues with package hoisting which may get resolved in future versions.
+
+  6. Check if D:\project_zm\advance\H5\advance-template\fooddetails\node_modules\babel-eslint is outside your project directory.
+     For example, you might have accidentally installed something in your home folder.
+
+  7. Try running npm ls babel-eslint in your project folder.
+     This will tell you which other package (apart from the expected react-scripts) installed babel-eslint.
+
+If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+That would permanently disable this preflight check in case you want to proceed anyway.
+
+P.S. We know this message is long but please read the steps above :-) We hope you find them helpful!
+
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! wangguan@0.1.0 start: `react-app-rewired start`
+npm ERR! Exit status 1
+npm ERR!
