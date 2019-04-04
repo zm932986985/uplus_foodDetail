@@ -20,33 +20,8 @@ _src_component_common:¹«ÓÃ×é¼ş¹éÊô£¬ÀïÃæÓĞÒ»Ğ©³£ÓÃµ½ÓÖÃ»±ØÒªÖØĞ´µÄ×é¼ş£¬ÀıÈçImg¡
 
 
 
+Ò»Ğ©ÃüÁî£º
+°²×°uplusÌá¹©µÄ´ò°ü¹¤¾ßpktool£º
+ npm install @uplus/packagetool -registry=http://101.201.39.57:8088
 
-To fix the dependency tree, try following the steps below in the exact order:
-
-  1. Delete package-lock.json (not package.json!) and/or yarn.lock in your project folder.
-  2. Delete node_modules in your project folder.
-  3. Remove "babel-eslint" from dependencies and/or devDependencies in the package.json file in your project folder.
-  4. Run npm install or yarn, depending on the package manager you use.
-
-In most cases, this should be enough to fix the problem.
-If this has not helped, there are a few other things you can try:
-
-  5. If you used npm, install yarn (http://yarnpkg.com/) and repeat the above steps with it instead.
-     This may help because npm has known issues with package hoisting which may get resolved in future versions.
-
-  6. Check if D:\project_zm\advance\H5\advance-template\fooddetails\node_modules\babel-eslint is outside your project directory.
-     For example, you might have accidentally installed something in your home folder.
-
-  7. Try running npm ls babel-eslint in your project folder.
-     This will tell you which other package (apart from the expected react-scripts) installed babel-eslint.
-
-If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
-That would permanently disable this preflight check in case you want to proceed anyway.
-
-P.S. We know this message is long but please read the steps above :-) We hope you find them helpful!
-
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! wangguan@0.1.0 start: `react-app-rewired start`
-npm ERR! Exit status 1
-npm ERR!
+npm install @uplus/uplus-api --save -registry=http://101.201.39.57:8088

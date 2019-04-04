@@ -1,9 +1,54 @@
 @import '~antd/dist/antd.css';
-body{
-  background-color: white!important
+
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('./assets/PingFang/Black_Normal_Simple.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'PingFangSC-Ultralight';
+  src: url('./assets/PingFang/Black_Thinest_Simple.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Light';
+  src: url('./assets/PingFang/Black_Thin_Simple.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Thin';
+  src: url('./assets/PingFang/Black_Thiner_Simple.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Medium';
+  src: url('./assets/PingFang/Black_midBlack_Simple.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Semibold';
+  src: url('./assets/PingFang/Black_midBold_Simple.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #F5F5F5 !important
+}
+
 :root {
-  --main-color: lightgray;
+  --main-color: #F5F5F5;
+  --main-width: .94rem;
 }
 
 .App {
@@ -23,7 +68,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(.1rem + 2vmin);
   color: white;
 }
 
@@ -41,26 +86,167 @@ body{
   }
 }
 
+/* 导航 */
+.ant-page-header .ant-divider {
+  display: none
+}
+
+.ant-page-header-title-view-title,
+.fakeHeader>div {
+  height: .36rem;
+  line-height: .36rem !important;
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .17rem;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .22rem;
+}
+
+.fakeHeader {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: .14rem;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum', "tnum";
+  position: relative;
+  padding: .16rem .32rem;
+  background: #fff;
+}
+
+.fakeHeader>div {
+  display: inline-block;
+  padding-right: .12rem;
+}
+
+.fakeHeader i {
+  height: .36rem;
+  line-height: .36rem !important;
+  float: left;
+  font-size: .16rem;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ant-tabs-nav.ant-tabs-nav-animated {
+  height: .44rem;
+  line-height: .44rem;
+}
+
+/* .Spin {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: .04rem;
+  margin-bottom: .2rem;
+  padding: .3rem .5rem;
+  height: 8.12rem;
+  line-height: 4.12rem;
+} */
+.Spin,.SpinCabinFood {
+  margin-top: .68rem;
+  text-align: center;
+  background: var(--main-color);
+  border-radius: .04rem;
+  margin-bottom: .2rem;
+  padding: .3rem .5rem;
+  height: 3.12rem;
+  line-height: 3.12rem;
+}
+
+.SpinTit,.Spin span {
+  height: .5rem;
+  display: block;
+  font-size: .15rem;
+  font-family: PingFangSC-Light, sans-serif;
+  color: #999999;
+  text-align: center;
+}
+
+.warningTXT{
+  margin-top: 1rem;
+  text-align: center;
+  width:3rem;
+  word-wrap : break-word
+}
+
+.DealFool {
+  height: .8rem !important;
+  line-height: .8rem;
+  background-color: var(--main-color);
+  bottom: 0rem !important;
+}
+
 .DealFool,
 .DealFool1 {
   width: 3.75rem;
   height: .4rem;
   position: fixed;
-  bottom: 0;
+  bottom: .1rem;
   left: 0;
   z-index: 99
 }
 
-.DealFool button {
-  width: 50%;
-  height: 100%!important;
-  font-size: .1rem!important;
+.DealFool1 {
+  background-color: var(--main-color);
+  bottom: 0rem;
 }
 
-.DealFool1 button {
+.DealFool1 span {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .12rem;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .4rem;
+}
+
+.DealFool1 .am-button-inline {
+  padding: 0 .05rem;
+}
+
+.ant-tabs-tab {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .2rem;
+}
+
+.DealFool a {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  width: 1.73rem;
+  line-height: .44rem;
+  height: .44rem;
+}
+
+.DealFool a:nth-child(1) {
+  margin-right: .1rem;
+}
+
+.DealFool1 a {
   width: 33.33%;
-  height: 100%!important;
-  font-size: .1rem!important;
+  height: 100% !important;
+  font-size: .1rem !important;
+}
+
+.DealFool span {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  line-height: .2rem;
 }
 
 .foodCover {
@@ -95,10 +281,17 @@ body{
 }
 
 .ant-page-header-back-icon {
+  height: .36rem;
+  line-height: .36rem !important;
   float: left;
+  font-size: .16rem
 }
 
 /* 食材类别列表样式 */
+.FoodKind {
+  padding: 1.1rem 0 0.7rem !important;
+}
+
 .foodKindList {
   width: .4rem;
   height: auto;
@@ -148,215 +341,793 @@ body{
   white-space: nowrap;
   overflow-y: hidden;
 }
-.foodLi .imgGroup::-webkit-scrollbar {
-  display: none;    /* 隐藏滚动条 */
+
+.foodLi div.imgGroup::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
 }
 
-.foodCover2{
+.foodCover2 {
   position: absolute;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, .4);
   color: white;
-  width:.6rem;
-  margin-left:-.1rem;
+  width: .6rem;
+  margin-left: -.1rem;
   height: .8rem;
   line-height: .7rem;
 }
 
 /* 食材信息页面 */
-.Info{
+.Info {
   position: fixed;
-  width:3.75rem;
-  height:100%;
-  background:rgba(0,0,0,.4);
-  z-index: 100
+  width: 3.75rem;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+  z-index: 1000
 }
 
-.Info>div{
+.Info>div {
+  width: 2.7rem;
   position: absolute;
   left: 50%;
-  top:50%;
-  margin-left:-1.5rem;
-  margin-top:-3rem;
-  width:3rem;
-  height:6rem;
-  background-color: white
+  margin-left: -1.35rem;
+  top: 50%;
+  margin-top: -1.8rem;
+  height: 3.65rem;
+  background-color: white;
+  border-radius: .05rem;
 }
 
-.btnGroup{
+.spanGroup {
   position: absolute;
-  left: 50%;
-  bottom:.3rem;
-  width:3rem;
-  margin-left:-1.5rem;
+  left: 0;
+  bottom: 0;
+  width: 2.7rem;
+  height: .5rem;
+  line-height: .5rem;
 }
 
-.btnGroup Button{
-  width:1rem;
-  margin:.2rem
+.spanGroup div {
+  display: inline-block;
+  width: 1.1rem;
+  margin: 0 .1rem;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: .17rem;
+  color: #2283E2;
+  letter-spacing: -0.41px;
+  text-align: center;
+  line-height: .22rem;
 }
 
-.info_pic{
-  width:1.6rem;
+.spanGroup div:nth-child(2) {
+  color: #ED2856;
+}
+
+.info_pic {
+  width: 1.6rem;
   margin: 0 auto;
-  /* background-color: gray; */
   overflow: hidden;
   text-align: center;
-  padding: .4rem .2rem;
+  padding: .2rem 0 0 0;
 }
+
+.info_pic img {
+  border-radius: 0.03rem;
+  width: auto;
+  height: .7rem;
+}
+
 /* 搜索框样式 */
-.serchBlock{
+.serchBlock {
+  padding: 0.1rem;
   position: absolute;
   left: 50%;
-  margin-left: -1.75rem;
-  background-color: white;
-  width:3.5rem;
+  margin-left: -50%;
+  background-color: var(--main-color);
+  width: 100%;
   height: auto;
   overflow: hidden;
   z-index: 999;
+  min-height: 7rem;
 }
-.serchBlock>div{
+
+.serchBlock>div {
   overflow: hidden;
 }
 
-.serchBlock .FoodItem{
-  margin:.1rem;
+.serchBlock .FoodItem {
+  margin: .05rem;
 }
 
-.serchBlock .FoodItem Img{
+.serchBlock .FoodItem Img {
+  margin: .05rem auto;
+}
+
+.serchBlock .FoodItem .ant-card-bordered {
+  border: 0;
+}
+
+.FoodItem .ant-card-meta-title,
+.ant-page-header-title-view-title {
+  font-size: .16rem !important;
+}
+
+.FoodItem .ant-card-body {
+  padding: 0 !important;
+}
+
+.FoodItemBar .ant-progress-inner {
+  height: .07rem;
+  bottom: .1rem;
+  background: #C6C6C6;
+  border-radius: 0 !important;
+}
+
+.FoodItemBar .ant-progress-bg {
+  height: .07rem !important;
+  border-radius: 0 !important
+}
+
+.hahah {
+  /* margin: .184rem .167rem 0 .157rem; */
+  /* height: .382rem; */
+  margin: 0.05rem .167rem;
+  height: .516rem;
+  width: .516rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.ant-card.ant-card-bordered.ant-card-hoverable {
+  border-radius: .06rem;
+  overflow: hidden;
+}
+
+.ant-tabs-bar.ant-tabs-top-bar.ant-tabs-small-bar {
+  background-color: white;
+  margin: 0 0 .03rem 0;
+}
+
+/* 新日期控件 */
+.Pickers {
+  margin: .1rem .2rem;
+  height: .44rem;
+  line-height: .44rem;
+  font-size: .14rem;
+}
+
+.Pickers span {
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: .14rem;
+  color: #333333;
+  /* letter-spacing: -0.34px; */
+  text-align: center;
+  line-height: .22rem;
+}
+
+.Pickers .am-list-extra {
+  font-size: .14rem !important;
+}
+
+.custom_text div .Pickers {
+  margin: 0;
+  /* height: .44rem; */
+  line-height: .44rem;
+  font-size: .14rem;
+}
+
+
+.Info .tips {
+  font-size: .14rem;
+}
+
+/* 食材详情页面 */
+.Detail {
+  width: 3.75rem;
+  height: 8.12rem;
+}
+
+.Detail>div:not(.JustGo) {
+  background-color: white;
+  margin-bottom: .1rem;
+}
+
+.Detail_pic {
+  width: 3.75rem;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.Detail_pic img {
+  /* width: 100%; */
+  height: 100%;
+}
+
+.Detail_pic {
+  padding: .1rem;
+}
+
+.DeatailItem {
+  position: relative;
+
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .14rem;
+  color: #333333;
+  line-height: .2rem;
+  display: inline-block;
+}
+
+.custom_text .am-list-item .am-input-label.am-input-label-5 {
+  width: .9rem;
+}
+
+.DeatailItem.content_null {
+  color: #BBBBBB !important;
+}
+
+.DeatailItem.tit {
+  width: .9rem;
+}
+
+.ant-list-item div {
+  margin: .1rem;
+}
+
+/* 搜索食材 */
+.SerchFood {
+  background-color: white;
+  position: fixed;
+  /* top: .68rem; */
+  left: 0;
+  z-index: 99;
+  font-size: .14rem !important;
+  height: .44rem;
+}
+
+.SerchFood input {
+  width: 3.51rem;
+  height: .32rem;
+  background-color: var(--main-color);
+  margin: .07rem .12rem .05rem .12rem;
+  border: 0 !important;
+}
+
+.SerchFood span.ant-input-suffix {
+  right: .25rem;
+}
+
+.SerchFood span.ant-input-suffix,
+.SerchFood input {
+  font-size: .14rem !important;
+}
+
+.SerchFood .ant-input-affix-wrapper {
+  border-bottom: .01rem solid var(--main-color);
+}
+
+/* 食材分类 */
+.Add .ant-tabs .ant-tabs-left-bar .ant-tabs-tab-prev,
+.Add .ant-tabs .ant-tabs-left-bar .ant-tabs-tab-next {
+  /* width:.94rem */
+  /* height: 8.12rem; */
+  display: none
+}
+
+.Add .ant-page-header {
+  position: fixed;
+  z-index: 99;
+  width: 3.75rem;
+  padding: .16rem .32rem;
+}
+
+.Add .ant-tabs-nav-container {
+  padding: 0 !important;
+  border-top: .02rem solid var(--main-color);
+  /* background-color: var(--main-color); */
+  min-height: 8.12rem;
+  width: var(--main-width);
+}
+
+.ipad {
+  width: .94rem;
+}
+
+.Add .ant-tabs .ant-tabs-left-content {
+  background-color: white;
+  min-height: 8.12rem;
+  margin-top: .02rem !important;
+  margin-left: var(--main-width);
+  border-left: 0;
+}
+
+.Add .ant-tabs-nav-scroll .ant-tabs-tab {
+  height: .6rem !important;
+  line-height: .6rem !important;
+  text-align: center;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.Add .ant-tabs-tab-active {
+  border-left: .04rem solid #2283E2 !important;
+}
+
+.Add .ant-tabs-nav-wrap,
+.Add .ant-tabs-nav-scroll {
+  overflow: visible
+}
+
+.IconCheck {
+  font-size: .2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #1890ff;
+}
+
+.IconOut {
+  font-size: .2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ED2956;
+  z-index: 9;
+}
+
+.IconOut1 {
+  left: '.58rem';
+  top: '.03rem';
+  z-index: '9';
+  background-color: 'white';
+  border-radius: '.1rem';
+  font-size: '.2rem'
+}
+
+.dateOfProduct {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .2);
+  width: .6rem;
+}
+
+.dateOfProduct span {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .1rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .2rem;
+}
+
+.DrawTips {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .11rem;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .2rem;
+}
+
+/* 食物详情 */
+
+.foodname {
+  margin: .1rem auto;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: .17rem;
+  color: #333333;
+  letter-spacing: -0.41px;
+  text-align: center;
+  line-height: .22rem;
+}
+
+.InfoSpan {
+  display: inline-block;
+  width: 1rem;
+  height: .75rem;
+  line-height: .75rem;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: .14rem;
+  color: #333333;
+  letter-spacing: -0.34px;
+  text-align: center;
+}
+
+.custom_pic {
+  padding: .375rem 0 .475rem 0;
+}
+
+.CustomInput {
+  border: 0;
+}
+
+.demoTitle:before,
+.demoTitle:after {
+  border-bottom: none;
+}
+
+.custom_text .ant-spin-container>div {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .14rem !important;
+  color: #333333 !important;
+  line-height: .44rem;
+  height: .44rem !important;
+}
+
+.am-list-item .am-list-line .am-list-arrow {
+  height: .15rem !important;
+}
+
+.custom_text input {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .14rem !important;
+  color: #333333 !important;
+  letter-spacing: 0;
+  line-height: .2rem !important;
+}
+
+.blackFont {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .14rem !important;
+  color: #333333 !important;
+  letter-spacing: 0;
+  line-height: .2rem !important;
+}
+
+.custom_pic span {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .12rem;
+  color: #2283E2;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .2rem;
+}
+
+.custom_pic>div:nth-child(2) {
+  position: relative;
+  margin-top: -.5rem;
+}
+
+.custom_submit {
+  width: 90%;
+  height: .44rem;
+  position: fixed;
+  bottom: 0;
+  left: 5%
+}
+
+.custom_submit span {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  color: #FFFFFF;
+  line-height: .2rem;
+}
+
+.DataNone {
+  height: 100%;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.DataNone img {
+  width: .661rem;
+  height: .669rem;
+}
+
+.DataNone>div {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .22rem;
+  margin-top: .2rem;
+}
+
+.lonlyBtn a {
+  margin: .12rem;
+  width: 3.51rem;
+  position: fixed !important;
+  bottom: .3rem;
+}
+
+.Kind .ant-tabs .ant-tabs-left-bar {
+  float: left;
+  margin-right: -.01rem;
+  margin-bottom: 0;
+  border-right: .01rem solid #e8e8e8;
+  position: fixed;
+  z-index: 98;
+  top: 1.11rem;
+}
+
+.Kind .ant-tabs-nav-scroll {
+  overflow-y: auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: 5.47rem;
+}
+
+.JustGo .ant-page-header {
+  width: 3.75rem;
+  height: .68rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+}
+
+.JustGo {
+  height: .68rem;
+}
+
+.Cabin .foodGroup {
+  padding: .05rem .07rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.DatePick_btn {
+  margin-top: -.44rem;
+  float: right;
+}
+
+.Progress {
+  position: relative;
+  height: .07rem;
+}
+
+.show-info {
+  margin-top: .18rem;
+  display: flex;
+  align-items: center;
+}
+
+.show-info .progress {
+  margin-right: .05rem;
+  width: 100%;
+}
+
+.Progress .am-progress-bar {
+  height: 100% !important;
+  border: 0;
+}
+
+/* 食材详情 */
+
+.FatherDrawListItem {
+  height: .44rem !important;
+  line-height: .44rem !important;
+  text-align: left;
+}
+
+.FatherDrawListItem>div {
+  margin: 0 .1rem;
+  display: inline-block;
+  color: #333333;
+
+}
+
+.FatherDrawListItem div:nth-child(1) {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .14rem;
+}
+
+.FatherDrawListItem div:nth-child(2) {
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: .15rem;
+  letter-spacing: 0;
+}
+
+.ImagePicker {
+  width: 1.47rem;
+  height: auto;
+  margin: 0 auto;
+
+}
+
+.ImagePicker .am-image-picker-list .am-image-picker-upload-btn {
+  background-image: url('./assets/images/addPic.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35% 35%;
+  border: 0;
+}
+
+.am-image-picker-list .am-image-picker-upload-btn:before,
+.am-image-picker-list .am-image-picker-upload-btn:after {
+  display: none !important;
+}
+
+.add_name {
+  color: #2283E2 !important;
+}
+
+/* 新的舱室样式 */
+
+.foodGroup::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
+}
+
+.CabinFix ul::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
+}
+
+.CabinFix ul {
+  padding: 0;
+  width: auto;
+  height: .44rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.CabinFix li {
+  position: relative;
+  width: .7rem;
+  display: inline-block;
+  list-style: none;
+  margin: 0 .1rem;
+  padding: .1rem;
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .2rem;
+}
+
+.CabinFix li.activeCabin div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -.15rem;
+  width: .3rem;
+  height: .44rem;
+  ;
+  border-bottom: .01rem solid #2283E2;
+}
+
+.CabinMain div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -.15rem;
+  width: .3rem;
+  height: .44rem;
+  ;
+  border-bottom: .01rem solid #2283E2;
+}
+
+
+.CabinFoodList {
+  width: 3.75rem;
+  height: auto;
+}
+
+.KindHeader {
+  position: fixed;
+  z-index: 999
+}
+
+.KindHeader .ant-page-header {
+  position: relative;
+}
+
+.KindHeader .SerchFood {
+  position: relative;
+}
+
+.cabinBtn {
+  display: inline-block;
+  width: 33.33%;
+}
+
+.cabinBtn a {
+  width: 100%
+}
+
+.DealFool1 {
+  font-size: .1rem;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+}
+
+.DealFool1::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
+}
+
+.cabinBtn2 {
+  width: 50%;
+}
+
+.cabinBtn1 {
+  width: 100%;
+}
+
+.Infovalue {
+  /* display: inline-block; */
+  float: right;
+}
+
+.am-list-body::before,
+.am-list-body::after {
+  display: none !important
+}
+
+.Pickers .am-list-line {
+  height: .44rem;
+  line-height: .44rem;
+}
+
+.FoodItemBar .am-notice-bar-content {
+  margin: 0;
+  /* line-height: .23rem;
+  height: .23rem; */
+}
+
+.FoodItemBar .am-notice-bar {
+  /* padding: 0 .1rem; */
+  background-color: white;
+  font-family: PingFangSC-Light;
+  font-size: 0.12rem;
+  color: rgb(102, 102, 102);
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: .23rem;
+  height: .23rem;
+}
+
+.FoodKind .FoodItemBar .am-notice-bar {
+  line-height: .36rem;
+  height: .36rem;
+}
+
+.OffLine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -.525rem;
+  margin-top: -.71rem;
+}
+
+.OffLine img {
+  display: block;
+  width: .654rem;
   margin: 0 auto;
 }
 
-.serchBlock .FoodItem .ant-card-bordered{
-  border:0;
+.OffLine span {
+  font-family: PingFangSC-Light, sans-serif;
+  font-size: .15rem;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: .88rem;
 }
 
-.FoodItem .ant-card-meta-title,.ant-page-header-title-view-title{
-  font-size: .16rem!important;
-}
-.ant-tabs-tab{
-  font-size: .14rem!important;
-}
-
-/* 日期控件 */
-/* .datepicker.default{
-  background-color: white!important;
-}
-
-.datepicker-modal{
-  position: fixed!important;
-  right: .7rem!important;
-  bottom: 3.5rem!important;
-  width: 1.5rem!important;
-  height: 0!important;
-  background-color: rgba(0, 0, 0, .6);
-  z-index: 999!important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.datepicker.default .datepicker-header{
-  display: none
-}
-
-.datepicker .datepicker-viewport{
-  height: 1.11rem!important;
-}
-
-.datepicker-navbar a{
-  display: none
-}
-
-.datepicker .datepicker-scroll>li{
-  font-size: .16rem!important
-}
-.Info .date{
-  position: relative;
-}
-
-.Info .day{
-  position: relative;
-}
-
-.sub-title {
-  margin: 8px;
-} */
-
-/* 新日期控件1 */
-.DatePick{
+.Cabin .CabinFix ul,
+.mainGo {
+  width: 100%;
   position: fixed;
-  z-index: 999;
-  width: 2rem;
-  top: 3.5rem;
-  left: 1rem;
-  height: 1rem;
-  overflow: hidden;
-}
-
-.am-picker-col-item{
-  font-size: .08rem!important
-}
-
-.DatePick .am-picker-col-content{
-  padding: .33rem 0rem!important;
-}
-
-.DatePick .am-picker-col-mask{
-  background-size: 100% .24rem!important;
-  height: 43%;
-}
-
-/* 新日期控件2 */
-.DayPick{
-  position: fixed;
-  z-index: 999;
-  width: 2rem;
-  top: 5rem;
-  left: 1rem;
-  height: 1rem;
-  overflow: hidden;
-}
-
-.am-picker-col-item{
-  font-size: .08rem!important
-}
-
-.DayPick .am-picker-col-content{
-  padding: .33rem 0rem!important;
-}
-
-.DayPick .am-picker-col-mask{
-  background-size: 100% .24rem!important;
-  height: 43%;
-}
-
-
-/* 食材详情页面 */
-.Detail{
-  width:3.75rem;
-  height:8.12rem;
-  background-color: lightgray
-}
-.Detail>div{
+  top: 0;
+  left: 0;
+  z-index: 99;
   background-color: white;
-  margin: .1rem 0;
-}
-.Detail_pic{
-  width:3.75rem;
-  height:2rem;
-  overflow: hidden;
-}
-.Detail_pic img{
-  width:100%;
-  height:100%
 }
 
-.ant-list-item div{
-  margin: .1rem;
+.Cabin .CabinFix ul {
+  top: .68rem;
+}
+
+.CabinFoodList {
+  margin-top: 1.12rem;
 }

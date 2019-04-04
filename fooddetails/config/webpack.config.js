@@ -346,6 +346,7 @@ module.exports = function(webpackEnv) {
                       },
                     },
                   ],
+				   ['import', [{ libraryName: "antd", style: 'css' }]],//zm后期加的，理由是antd的按需加载
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
